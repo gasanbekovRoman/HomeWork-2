@@ -12,15 +12,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderColorRed: UISlider!
     @IBOutlet weak var colorView: UIView!
     
+    @IBOutlet weak var sliderColorGreen: UISlider!
+    @IBOutlet weak var sliderColorBlue: UISlider!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        colorView.backgroundColor = .white
-        sliderColorRed
+        //colorView.backgroundColor = .white
     }
   
     func changeColorView() {
-        colorView.backgroundColor = UIColor(red: CGFloat(sliderColorRed.value), green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+        colorView.backgroundColor = UIColor(red: CGFloat(sliderColorRed.value), green: CGFloat(sliderColorGreen.value), blue: CGFloat(sliderColorBlue.value), alpha: 1)
     }
+    
+    @IBAction func rgbSliderChange(_ sender: Any) {
+        changeColorView()
+        }
+
+   
+    
+    
+
+
 }
     
 
