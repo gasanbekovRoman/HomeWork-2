@@ -9,11 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var sliderColorRed: UISlider!
+    @IBOutlet weak var colorView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        colorView.backgroundColor = .white
+        sliderColorRed
     }
-
-
+  
+    func changeColorView() {
+        colorView.backgroundColor = UIColor(red: CGFloat(sliderColorRed.value), green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+    }
 }
+    
+
+
 
