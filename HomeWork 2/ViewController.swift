@@ -17,14 +17,14 @@ class ViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //colorView.backgroundColor = .white
+      
     }
   
     func changeColorView() {
         colorView.backgroundColor = UIColor(red: CGFloat(sliderColorRed.value), green: CGFloat(sliderColorGreen.value), blue: CGFloat(sliderColorBlue.value), alpha: 1)
     }
     
-    @IBAction func rgbSliderChange(_ sender: Any) {
+    @IBAction func rgbSliderChange() {
         changeColorView()
         }
 
