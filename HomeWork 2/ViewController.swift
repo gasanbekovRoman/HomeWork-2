@@ -12,9 +12,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderColorRed: UISlider!
     @IBOutlet weak var colorView: UIView!
     
-    @IBOutlet weak var sliderColorGreen: UISlider!
     @IBOutlet weak var sliderColorBlue: UISlider!
-   
+    @IBOutlet weak var sliderColorGreen: UISlider!
+    
+    @IBOutlet weak var labelRed: UILabel!
+    @IBOutlet weak var labelGreen: UILabel!
+    @IBOutlet weak var labelBlue: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -28,7 +33,20 @@ class ViewController: UIViewController {
         changeColorView()
         }
 
-   
+   @IBAction func labelRedSlider() {
+       labelRed.text = String(format: "%.2f" , sliderColorRed.value)
+    }
+    
+  
+    @IBAction func labelGreenSlider(_ sender: Any) {
+        labelGreen.text = String(format: "%.2f" , sliderColorGreen.value)
+    }
+    
+    @IBAction func labelBlueSlider(_ sender: Any) {
+        labelBlue.text = String(format: "%.2f" , sliderColorBlue.value)
+    }
+    
+    
     
     
 
