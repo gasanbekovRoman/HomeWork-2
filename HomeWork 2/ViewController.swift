@@ -9,11 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var sliderColorRed: UISlider!
     @IBOutlet weak var colorView: UIView!
     
-    @IBOutlet weak var sliderColorBlue: UISlider!
+    @IBOutlet weak var sliderColorRed: UISlider!
     @IBOutlet weak var sliderColorGreen: UISlider!
+    @IBOutlet weak var sliderColorBlue: UISlider!
+    
     
     @IBOutlet weak var labelRed: UILabel!
     @IBOutlet weak var labelGreen: UILabel!
@@ -22,6 +23,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        colorView.layer.cornerRadius = 15
+        
+        colorView.backgroundColor = UIColor(red: CGFloat(sliderColorRed.value), green: CGFloat(sliderColorGreen.value), blue: CGFloat(sliderColorBlue.value), alpha: 1)
       
     }
   
@@ -38,11 +43,11 @@ class ViewController: UIViewController {
     }
     
   
-    @IBAction func labelGreenSlider(_ sender: Any) {
+    @IBAction func labelGreenSlider() {
         labelGreen.text = String(format: "%.2f" , sliderColorGreen.value)
     }
     
-    @IBAction func labelBlueSlider(_ sender: Any) {
+    @IBAction func labelBlueSlider() {
         labelBlue.text = String(format: "%.2f" , sliderColorBlue.value)
     }
     
